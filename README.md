@@ -8,5 +8,16 @@ $ cd bdwmb
 $ make full
 ```
 
+## Flags
+```
+-q = quiet, do not show debug messages.
+```
+
+## Using it in .xinitrc
+```bash
+exec /usr/local/bin/bdwmb -q &
+```
+
+
 ## For documentation look into the `/doc` directory.
 
