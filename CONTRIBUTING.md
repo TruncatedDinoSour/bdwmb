@@ -7,6 +7,12 @@
 # Module - {MODULE_NAME}
 {WHAT THE MODULE DOES}
 
+{CODE BLOCK START}
+NAME: {MODULE_NAME}
+DEPENDENCIES: {MODULE DEPENDENDENCIES}
+TYPE: {MODULE TYPE (I.e bash script, shell script, python script, ...)}
+{CODE BLOCK END}
+
 ## Setup
 {HOW TO SET IT UP}
 
