@@ -17,7 +17,7 @@ main() {
     local bar_text
 
     for module in "${MODULES[@]}"; do
-        . "$DIR/modules/$module" 2>/dev/null || . "$HOME/.config/bdwmb/modules/$module"
+        . "$DIR/bdwmb_modules/$module" 2>/dev/null || . "$HOME/.config/bdwmb/modules/$module"
         vecho "Loading: $module (b$module)"
         bar_text+="$("b$module")"
     done
