@@ -18,6 +18,11 @@ $ make full
 exec /usr/local/bin/bdwmb -q &
 ```
 
+## Dependencies
+```
+xsetroot
+```
+
 
 ## For documentation look into the `/doc` directory.
 
