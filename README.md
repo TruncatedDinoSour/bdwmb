@@ -11,6 +11,7 @@ $ make full
 ## Flags
 ```
 -q = quiet, do not show debug messages.
+-h = show help
 ```
 
 ## Using it in .xinitrc

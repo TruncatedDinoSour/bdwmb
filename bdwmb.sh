@@ -6,12 +6,30 @@ DIR=$(dirname "$(readlink -f "$0")")
 
 
 vecho() {
-    echo "$@"
+    [[ "$1" ]] && local p="[INFO] $1"
+    echo "$p"
+}
+
+print_help() {
+    echo '-q    - quiet, run without info/debug info'
+    echo '-h    - print help'
 }
 
 
 main() {
-    [[ "$1" == "-q" ]] && vecho() { printf ''; }
+    case "$1" in
+        -q)
+            vecho() { printf ''; }
+            ;;
+        -h)
+            print_help
+            exit 0
+            ;;
+        -*)
+            vecho "Switch \"$1\" not found"
+            exit 1
+            ;;
+    esac
 
     local module
     local bar_text
@@ -29,6 +47,6 @@ main() {
 
 while true; do
     main "$@"
-    sleep "$DELAY"
+    [[ "$DELAY" ]] && sleep "$DELAY"
 done
 

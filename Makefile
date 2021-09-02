@@ -15,7 +15,12 @@ bin:
 	mkdir -p ${PREFIX}/bin
 	cp bdwmb.sh ${PREFIX}/bin/bdwmb
 	chmod a+rx ${PREFIX}/bin/bdwmb
-	cp -r bdwmb_modules ${PREFIX}
+	cp -r bdwmb_modules ${PREFIX}/bin
+
+git:
+	git add .
+	git commit -m "update @ $(shell date)"
+	git push -u origin main
 
 full:
 	make uninstall
