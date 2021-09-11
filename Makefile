@@ -18,9 +18,9 @@ bin:
 	cp -r bdwmb_modules ${PREFIX}/bin
 
 git:
-	git add .
-	git commit -m "update @ $(shell date)"
-	git push -u origin main
+	-git add .
+	-git commit -m "update @ $(shell date)"
+	-git push -u origin main
 
 full:
 	make uninstall
