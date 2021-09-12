@@ -1,4 +1,3 @@
-RUNAS ?= sudo
 PREFIX ?= /usr/local
 
 all: install
@@ -9,7 +8,7 @@ install:
 	if [ ! -f ~/.config/bdwmb/config.sh ]; then cp config.sh ~/.config/bdwmb; fi
 
 uninstall:
-	${RUNAS} rm -rf ${PREFIX}/bin/bdwmb ${PREFIX}/bin/bdwmb_modules
+	rm -rf ${PREFIX}/bin/bdwmb ${PREFIX}/bin/bdwmb_modules
 
 bin:
 	mkdir -p ${PREFIX}/bin
@@ -25,5 +24,5 @@ git:
 full:
 	make uninstall
 	make install
-	${RUNAS} make bin
+	make bin
 
