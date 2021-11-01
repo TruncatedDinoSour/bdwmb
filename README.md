@@ -6,6 +6,7 @@ A simple, modular bash/shell script for configuring your DWM bar.
 $ git clone https://github.com/TruncatedDinosour/bdwmb
 $ cd bdwmb
 $ sudo make full
+$ make config
 ```
 
 ## Flags
