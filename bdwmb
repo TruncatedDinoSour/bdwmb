@@ -1,8 +1,7 @@
 #!/bin/bash
 
 
-DIR=$(dirname "$(readlink -f "$0")")
-. "$HOME/.config/bdwmb/config.sh"
+. "$HOME/.config/bdwmb/config.sh" || (notify-send 'BdwmB error' 'the configuration file was not found' ; exit 1)
 
 
 vecho() {
@@ -35,7 +34,7 @@ main() {
     local bar_text
 
     for module in "${MODULES[@]}"; do
-        . "$DIR/bdwmb_modules/$module" 2>/dev/null || . "$HOME/.config/bdwmb/modules/$module"
+        . "/usr/share/bdwmb/modules/$module" 2>/dev/null || . "$HOME/.config/bdwmb/modules/$module"
         vecho "Loading: $module (b$module)"
         bar_text+="$("b$module")"
     done
