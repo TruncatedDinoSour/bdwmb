@@ -1,7 +1,7 @@
 PREFIX ?= /usr/local
 CONF ?= $(HOME)/.config/bdwmb
-SHARE = /usr/share/bdwmb
-MODULES = $(SHARE)/modules
+SHARE ?= /usr/share/bdwmb
+MODULES ?= $(SHARE)
 
 all: install
 
