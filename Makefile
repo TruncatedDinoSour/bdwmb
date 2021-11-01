@@ -8,6 +8,8 @@ all: install
 install:
 	mkdir -p "$(DESTDIR)$(CONF)"
 	mkdir -p "$(DESTDIR)$(CONF)"/modules
+
+config:
 	if [ ! -f "$(DESTDIR)$(CONF)"/config.sh ]; then install -Dm755 config.sh "$(DESTDIR)$(CONF)"; fi
 
 uninstall:
