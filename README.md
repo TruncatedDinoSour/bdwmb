@@ -15,9 +15,9 @@ $ make config
 -h = show help
 ```
 
-## Using it in .xinitrc
+## Using it in .xprofile
 ```bash
-exec /usr/local/bin/bdwmb -q &
+bdwmb -q &
 ```
 
 ## Dependencies
