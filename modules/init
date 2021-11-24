@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 binit() {
     init="$(strings /sbin/init |

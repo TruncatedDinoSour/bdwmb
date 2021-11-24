@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # DEPENDS ON: $TIME_FORMAT
 
 btime() {

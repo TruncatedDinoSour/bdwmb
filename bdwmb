@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 
 . "$HOME/.config/bdwmb/config.sh" || (notify-send 'BdwmB error' 'the configuration file was not found' ; exit 1)

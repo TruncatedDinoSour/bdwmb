@@ -1,5 +1,4 @@
-#!/bin/sh
-# DEPENDS ON: NONE
+#!/usr/bin/env sh
 
 bram() {
     FREE="$(free -h | grep -i mem)"

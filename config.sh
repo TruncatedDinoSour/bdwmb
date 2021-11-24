@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This is an example configuration file for bdwmb
 
 # Config

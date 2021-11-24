@@ -1,5 +1,4 @@
-#!/bin/sh
-# DEPENDS ON: NONE
+#!/usr/bin/env sh
 
 bbrightness() {
     printf 'S %.0f%%' "$(xbacklight)"

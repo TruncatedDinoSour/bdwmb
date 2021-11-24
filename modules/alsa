@@ -1,5 +1,4 @@
-#!/bin/sh
-# DEPENDS ON: NONE
+#!/usr/bin/env sh
 
 balsa() {
     STATUS="$(amixer sget Master | tail -n1 | sed -r "s/.*\[(.*)\]/\1/")"
