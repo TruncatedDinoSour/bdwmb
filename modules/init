@@ -2,8 +2,7 @@
 
 binit() {
     init="$(strings /sbin/init |
-        awk 'match($0, /(upstart|systemd|sysvinit|runit)/) { print substr($0, RSTART, RLENGTH); exit;  }')"
+        awk 'match($0, /(upstart|systemd|sysvinit|runit|sysinit)/) { print substr($0, RSTART, RLENGTH); exit;  }')"
 
     printf "%s" "$init"
 }
-
