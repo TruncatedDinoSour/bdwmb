@@ -23,6 +23,7 @@ $ make config
 ```
 -q = quiet, do not show debug messages.
 -h = show help
+-l = list modules
 ```
 
 ## Using it in .xprofile or .xinitrc

@@ -3,7 +3,7 @@
 HOME="${HOME:-$(eval echo ~)}"
 
 die() {
-    echo "FATAL ERROR: $1"
+    echo "FATAL ERROR: $1" >&2
     xsetroot -name "$1"
 
     exit 1
@@ -19,6 +19,7 @@ vecho() {
 print_help() {
     echo '-q    - quiet, run without info/debug info'
     echo '-h    - print help and exit'
+    echo '-l    - list modules'
 }
 
 main() {
@@ -30,7 +31,12 @@ main() {
         print_help
         exit
         ;;
-    *)
+    -l | --l | -list-modules | --list-modules)
+        find "${HOME}/.config/bdwmb/modules" "/usr/share/bdwmb/modules" -type f |
+            sed 's/.*\///g'
+        exit
+        ;;
+    -*)
         die "Switch \"$1\" not found"
         ;;
     esac
@@ -40,7 +46,7 @@ main() {
 
     for module in "${MODULES[@]}"; do
         . "$HOME/.config/bdwmb/modules/$module" 2>/dev/null ||
-            . "/usr/share/bdwmb/modules/$module" ||
+            . "/usr/share/bdwmb/modules/$module" 2>/dev/null ||
             die "Failed to load module $module"
 
         vecho "Loading: $module (b$module)"
