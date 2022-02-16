@@ -4,4 +4,3 @@
 bsep1() {
     printf '%s' "$SEPERATOR1"
 }
-

@@ -3,4 +3,3 @@
 bkernel() {
     printf "%s" "$(uname -r)"
 }
-

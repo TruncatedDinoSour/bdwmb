@@ -3,4 +3,3 @@
 bbrightness() {
     printf 'S %.0f%%' "$(xbacklight)"
 }
-

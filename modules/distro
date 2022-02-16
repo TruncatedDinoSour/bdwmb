@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 
 bdistro() {
-    printf "%s" "$(/bin/grep -io '^NAME=.*$' < /etc/os-release | awk '{split($0,name,"="); print tolower(name[2]) }')"
+    printf "%s" "$(grep -io '^NAME=.*$' </etc/os-release | awk '{split($0,name,"="); print tolower(name[2]) }')"
 }
-

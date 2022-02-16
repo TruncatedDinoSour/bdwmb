@@ -7,4 +7,3 @@ bdrive() {
 
     printf 'D %s' "$DISK_LEFT"
 }
-

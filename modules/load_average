@@ -4,4 +4,3 @@
 bload_average() {
     printf "AVG %s" "$(cut -d " " -f "${LOAD_FIELDS}" /proc/loadavg)"
 }
-

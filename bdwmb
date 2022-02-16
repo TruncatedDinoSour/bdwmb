@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 
+HOME="${HOME:-$(eval echo ~)}"
 
-. "$HOME/.config/bdwmb/config.sh" || (notify-send 'BdwmB error' 'the configuration file was not found' ; exit 1)
+die() {
+    echo "FATAL ERROR: $1"
+    xsetroot -name "$1"
 
+    exit 1
+}
+
+. "$HOME/.config/bdwmb/config.sh" || die 'the configuration file was not found'
 
 vecho() {
     [[ "$1" ]] && local p="[INFO] $1"
@@ -11,30 +18,31 @@ vecho() {
 
 print_help() {
     echo '-q    - quiet, run without info/debug info'
-    echo '-h    - print help'
+    echo '-h    - print help and exit'
 }
-
 
 main() {
     case "$1" in
-        -q)
-            vecho() { printf ''; }
-            ;;
-        -h)
-            print_help
-            exit 0
-            ;;
-        -*)
-            vecho "Switch \"$1\" not found"
-            exit 1
-            ;;
+    -q | --q | -quiet | --quiet)
+        vecho() { printf ''; }
+        ;;
+    -h | --h | -help | --help)
+        print_help
+        exit
+        ;;
+    *)
+        die "Switch \"$1\" not found"
+        ;;
     esac
 
     local module
     local bar_text
 
     for module in "${MODULES[@]}"; do
-        . "/usr/share/bdwmb/modules/$module" 2>/dev/null || . "$HOME/.config/bdwmb/modules/$module"
+        . "$HOME/.config/bdwmb/modules/$module" 2>/dev/null ||
+            . "/usr/share/bdwmb/modules/$module" ||
+            die "Failed to load module $module"
+
         vecho "Loading: $module (b$module)"
         bar_text+="$("b$module")"
     done
@@ -43,9 +51,7 @@ main() {
     xsetroot -name "$bar_text"
 }
 
-
 while true; do
     main "$@"
     [[ "$DELAY" ]] && sleep "$DELAY"
 done
-

@@ -7,4 +7,3 @@ bram() {
 
     printf 'M %s/%s' "$RAM_USED" "$RAM_TOTAL"
 }
-

@@ -4,4 +4,3 @@
 btime() {
     printf "%s" "$(date "$TIME_FORMAT")"
 }
-
