@@ -18,7 +18,7 @@ bin:
 	mkdir -p "$(DESTDIR)$(PREFIX)"/bin "$(DESTDIR)$(SHARE)"
 	install -Dm755 bdwmb "$(DESTDIR)$(PREFIX)"/bin
 	-@ # TODO: turn cp -r to install(1)
-	rm -rf "$(DESTDIR)$(MODULES)"
+	rm -rf "$(DESTDIR)$(MODULES)/modules"
 	cp -r modules "$(DESTDIR)$(MODULES)"
 
 git:
