@@ -9,5 +9,5 @@ TYPE: Shellscript
 ```
 
 ## Setup
-Add the `kernel` module to your modules list
 
+Add the `kernel` module to your modules list

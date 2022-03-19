@@ -9,5 +9,5 @@ TYPE: Shellscript
 ```
 
 ## Setup
-Add the `init` modules to your modules list
 
+Add the `init` modules to your modules list

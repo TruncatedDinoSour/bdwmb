@@ -2,8 +2,8 @@
 # DEPENDS ON: $BATTERY_NAME, $BATTERY_SHOW_STATUS
 
 bbattery() {
-    CHARGE=$(cat "/sys/class/power_supply/$BATTERY_NAME/capacity")
-    STATUS=$(cat "/sys/class/power_supply/$BATTERY_NAME/status")
+    CHARGE=$(cat "/sys/class/power_supply/${BATTERY_NAME:-BAT0}/capacity")
+    STATUS=$(cat "/sys/class/power_supply/${BATTERY_NAME:-BAT0}/status")
 
     # TODO: ADD MORE STATUSES (NEED A LIST OF ALL STATUSES)
     if [ "$BATTERY_SHOW_STATUS" -ne 1 ]; then

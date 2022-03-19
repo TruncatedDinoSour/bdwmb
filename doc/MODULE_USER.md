@@ -9,6 +9,5 @@ TYPE: Shellscript
 ```
 
 ## Setup
-Add the `user` modules to your modules list
 
-
+Add the `user` module to your modules list

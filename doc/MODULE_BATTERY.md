@@ -1,5 +1,7 @@
 # Module - battery
+
 This module shows your battery percentage and status.
+
 ```
 NAME: battery
 DEPENDENCIES: None
@@ -7,8 +9,10 @@ TYPE: Shellscript
 ```
 
 ## Setup
+
 Go to your config.sh and add the `battery` module to your module list.
 After that define the `BATTERY_NAME` variable with your battery name, for example:
+
 ```bash
 export BATTERY_NAME='BAT1'
 ```
@@ -21,4 +25,3 @@ export BATTERY_SHOW_STATUS=1
 ```
 
 1 - True and 0 - False.
-

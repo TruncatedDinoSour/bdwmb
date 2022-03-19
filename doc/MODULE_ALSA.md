@@ -9,5 +9,5 @@ TYPE: Shellscript
 ```
 
 ## Setup
-Add the `alsa` module to your modules list
 
+Add the `alsa` module to your modules list

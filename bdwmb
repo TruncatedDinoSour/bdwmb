@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-HOME="${HOME:-$(eval echo ~)}"
-
 die() {
     echo "FATAL ERROR: $1" >&2
     xsetroot -name "$1"
@@ -9,10 +7,11 @@ die() {
     exit 1
 }
 
+[ ! -d "$HOME" ] && die "'$HOME' is not a valid HOME directory"
 . "$HOME/.config/bdwmb/config.sh" || die 'the configuration file was not found'
 
 vecho() {
-    [[ "$1" ]] && local p="[INFO] $1"
+    [ "$1" ] && local p="[INFO] $1"
     echo "$p"
 }
 
@@ -59,5 +58,5 @@ main() {
 
 while true; do
     main "$@"
-    [[ "$DELAY" ]] && sleep "$DELAY"
+    [ "$DELAY" ] && sleep -- "$DELAY"
 done

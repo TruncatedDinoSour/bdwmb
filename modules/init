@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+# DEPENDS ON: strings, awk
 
 binit() {
     init="$(strings /sbin/init |

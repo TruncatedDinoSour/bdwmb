@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+# DEPENDS ON: free, grep
 
 bram() {
     FREE="$(free -h | grep -i mem)"

@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+# DEPENDS ON: NONE
 
 bpad() {
     printf ' '

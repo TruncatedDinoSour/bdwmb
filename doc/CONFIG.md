@@ -13,11 +13,11 @@ is a bash array of modules you want.
 Every module is listed and loaded from the `modules` directory so you can pick everything from there.
 
 **EXAMPLE:**
+
 ```bash
 # config.sh
 export MODULES=('pad' 'time' 'sep1' 'battery')
 ```
-
 
 ### 2. Setting the refresh rate
 
@@ -25,8 +25,8 @@ To set the refresh rate of your bar set the `DELAY` variable.
 This variable will regulate how often your bar will update.
 
 **EXAMPLE:**
+
 ```bash
 # config.sh
 export DELAY='5s'
 ```
-

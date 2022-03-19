@@ -9,5 +9,5 @@ TYPE: Shellscript
 ```
 
 ## Setup
-Add the `distro` modules to your modules list
 
+Add the `distro` modules to your modules list

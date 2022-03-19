@@ -9,4 +9,5 @@ TYPE: Shellscript
 ```
 
 ## Setup
+
 Add the `cpu` module to your modules list
