@@ -1,6 +1,6 @@
 # BdwmB
 
-A simple, modular bash/shell script for configuring your DWM bar.
+> A simple, modular bash/shell script for configuring your DWM bar.
 
 ## Installation
 
